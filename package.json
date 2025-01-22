@@ -1,5 +1,5 @@
 {
-  "name": "fun-api",
+  "name": "fb-api",
   "version": "1.0.0",
   "description": "A simple API environment for easy creation of APIs",
   "main": "src/app.js",
