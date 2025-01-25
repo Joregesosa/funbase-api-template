@@ -8,10 +8,8 @@ const resolveDir = (relativePath) => path.resolve(__dirname, relativePath);
 
 export const rootDir = resolveDir("../../../");
 export const srcDir = resolveDir("../../");
+export const modulesDir = resolveDir("../../modules");
 export const routesDir = resolveDir("../../routes");
-export const controllersDir = resolveDir("../../controllers");
-export const modelsDir = resolveDir("../../models");
-export const migrationsDir = resolveDir("../../database/migrations");
 export const seedsDir = resolveDir("../../database/seeds");
 export const utilsDir = resolveDir("../../utils");
 export const scriptsDir = resolveDir("../../../scripts");
@@ -25,9 +23,7 @@ export default {
   rootDir,
   srcDir,
   routesDir,
-  controllersDir,
-  modelsDir,
-  migrationsDir,
+  modulesDir,
   seedsDir,
   utilsDir,
   scriptsDir,
