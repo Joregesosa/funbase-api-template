@@ -25,6 +25,15 @@
     "mysql2": "^3.12.0",
     "sequelize": "^6.37.5"
   },
+  "imports": {
+    "#src/*": "./src/*",
+    "#config/*": "./src/config/*",
+    "#modules/*": "./src/modules/*",
+    "#database/*": "./src/database/*",
+    "#middlewares/*": "./src/middlewares/*",
+    "#routes/*": "./src/routes/*",
+    "#utils/*": "./src/utils/*"
+  },
   "devDependencies": {
     "nodemon": "^3.1.9"
   }
