@@ -1,6 +1,6 @@
 import { Router } from "express";
-import { useRoute } from "../utils/helpers/routeHelper.js";
-import {routes} from "./routes.js";
+import { useRoute } from "#utils/helpers/routeHelper.js";
+import { routes } from "./routes.js";
 
 const appRouter = Router();
 
