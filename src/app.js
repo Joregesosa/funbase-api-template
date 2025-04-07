@@ -3,7 +3,7 @@ import cors from "cors";
 import cookieParser from "cookie-parser";
 import appConfig from "#config/index.js";
 import routes from "#routes/index.js";
-import { ErrorHandler, LogError } from "#middlewares/ErrorsHandler.js";
+import { ErrorHandler, LogError } from "#middlewares/errorMiddleware.js";
 
 
 const app = express();
