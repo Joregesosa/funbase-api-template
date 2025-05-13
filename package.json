@@ -1,29 +1,32 @@
 {
   "name": "fb-api",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A simple API environment for easy creation of APIs",
   "main": "src/app.js",
   "type": "module",
   "scripts": {
+    "prestart": "node swagger.js",
     "start": "node src/app.js",
-    "dev": "nodemon src/app.js"
+    "dev": "nodemon src/app.js",
+    "predev": "node swagger.js"
   },
   "bin": "setup.js",
-  "dependencies": {
-    "@hapi/boom": "^10.0.1",
+  "dependencies": { 
     "bcrypt": "^5.1.1",
     "cookie-parser": "^1.4.7",
     "cors": "^2.8.5",
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
-    "fb-modules": "^1.0.4",
-    "joi": "^17.13.3",
+    "fb-modules": "^1.0.5", 
     "jsonwebtoken": "^9.0.2",
     "multer": "^1.4.5-lts.1",
     "mysql2": "^3.12.0",
-    "sequelize": "^6.37.5"
+    "sequelize": "^6.37.5",
+    "swagger-autogen": "^2.23.7",
+    "swagger-ui-express": "^5.0.1"
   },
   "imports": {
+    "#root/*": "./*",
     "#src/*": "./src/*",
     "#config/*": "./src/config/*",
     "#modules/*": "./src/modules/*",
