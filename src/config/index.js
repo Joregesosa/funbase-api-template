@@ -2,7 +2,8 @@ import { config } from "dotenv";
 config();
 export default {
   appName: process.env.APP_NAME || "Express API",
-  host: process.env.APP_HOST || "http://localhost",
+  appDescription: process.env.APP_DESCRIPTION || "Express API Description",
+  host: process.env.APP_HOST || "localhost",
   port: process.env.PORT || 3000,
   db: {
     host: process.env.DB_HOST || "localhost",
