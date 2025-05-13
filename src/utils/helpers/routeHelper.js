@@ -19,7 +19,7 @@ export async function useRoute(routes, router) {
 
       // Importa dinámicamente el módulo de la ruta
       const module = await import(`#modules/${name}/Router.js`);
-      const routePath = `/${name}`;
+      const routePath = `/`;
       const routeHandler = module[importName];
 
       if (!routeHandler) {
