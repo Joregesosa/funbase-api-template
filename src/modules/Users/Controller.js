@@ -177,7 +177,7 @@ export const restore = async (req, res, next) => {
 export const profile = async (req, res, next) => {
   try {
     //#swagger.tags = ['Users']
-    const user = await Users.findByPk(req.user.id);
+    const user = await Users.findByPk(req.auth.id);
     if (!user) {
       throw { status: 404, message: "Users not found" };
     }
