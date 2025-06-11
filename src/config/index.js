@@ -5,6 +5,7 @@ export default {
   appDescription: process.env.APP_DESCRIPTION || "Express API Description",
   host: process.env.APP_HOST || "localhost",
   port: process.env.PORT || 3000,
+  env: process.env.APP_ENV || "development",
   db: {
     host: process.env.DB_HOST || "localhost",
     user: process.env.DB_USER || "root",

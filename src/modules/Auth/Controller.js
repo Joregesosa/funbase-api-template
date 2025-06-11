@@ -1,8 +1,7 @@
 import { Users } from "#modules/Users/Model.js";
 import config from "#config/index.js";
 import jwt from "jsonwebtoken";
-import { compare, hash } from "bcrypt";
-
+import { compare, hash } from "bcrypt"; 
 
 
 /**
@@ -29,7 +28,7 @@ import { compare, hash } from "bcrypt";
 async function login(req, res, next) {
   try {
       //#swagger.tags = ['Auth']
-    const { jwtSecret } = config;
+    const { jwtSecret, env } = config;
     const { email, password } = req.body;
 
     if (!email || !password) {
@@ -51,9 +50,9 @@ async function login(req, res, next) {
 
     res.cookie("token", token, {
       httpOnly: true,
-      secure: process.env.NODE_ENV === "production",
+      secure: ap === "production",
       // valores posibles: "strict" for same-site cookies, "lax" for cross-origin cookies, "none" for no restrictions
-      sameSite: process.env.NODE_ENV === "production" ? "strict" : "lax",
+      sameSite: env=== "production" ? "strict" : "lax",
       //  para 24 horas utilizar maxage: 24 * 60 * 60 * 1000
       maxAge: 15 * 60 * 1000,
     });
