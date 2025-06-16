@@ -50,7 +50,7 @@ async function login(req, res, next) {
 
     res.cookie("token", token, {
       httpOnly: true,
-      secure: ap === "production",
+      secure: env === "production",
       // valores posibles: "strict" for same-site cookies, "lax" for cross-origin cookies, "none" for no restrictions
       sameSite: env=== "production" ? "strict" : "lax",
       //  para 24 horas utilizar maxage: 24 * 60 * 60 * 1000
