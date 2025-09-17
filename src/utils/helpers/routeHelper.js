@@ -12,6 +12,8 @@ import authMiddleware from "#middlewares/authMiddleware.js";
  * @returns {Promise<void>} - No retorna valor, pero registra las rutas en el router.
  */
 export async function useRoute(routes, router) {
+  // ordenar rutas primero las no protegidas y luego las protegidas
+  routes.sort((a, b) => a.is_protected - b.is_protected);
   for (const route of routes) {
     try {
       const { name, is_protected } = route;
