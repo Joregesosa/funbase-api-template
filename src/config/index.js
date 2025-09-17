@@ -17,7 +17,8 @@ export default {
   jwtSecret: process.env.JWT_SECRET || "your_jwt_secret",
   corsOptions: {
     origin: process.env.CORS_ORIGIN || "*",
-    methods: ["GET", "POST", "PUT", "DELETE"],
+    methods: ["GET", "POST", "PUT", "DELETE", "PATCH"],
     allowedHeaders: ["Content-Type", "Authorization"],
+    credentials: true,
   },
 };
