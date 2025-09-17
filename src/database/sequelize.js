@@ -1,6 +1,5 @@
 import { Sequelize } from "sequelize";
 import config from "#config/index.js";
-import readline from "readline";
 
 const { database, password, port, host, user, dialect } = config.db;
 const aditional = {
